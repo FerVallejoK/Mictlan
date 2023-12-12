@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Camino al Mictlán</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+
+
+<body>
+
+  <div id="pantalla-inicio" class="pantalla-inicio visible">
+    <h1>🌵 Camino al Mictlán ⚰️</h1>
+    <div class="juego">
+      <p><b>Encuentra los pares</b>:  Nuestro objetivo sera encontrar el par de cartas identicas.</p>
+      <p><b>Limite de jugadas</b>:  Cada uno de los niveles tiene ciertos movimientos.</p>
+      <p><b>Carta Dios</b>:  Esta carta mostrara por pocos instantes el como fueron ordenadas las cartas.</p>
+    </div>
+    <div class="pantalla-inicio-btn">
+      <button id="inicio-btn">Jugar</button>
+    </div>
+    <div id="footer">
+      <p>Fernando Martinez Vallejo</p>
+    </div>
+  </div>
+
+  <!-- Header -->
+
+  <header class="header">
+    <div class="container">
+      <div class="contadores">
+        <div class="contador-item">
+          <h4 class="header-titulo">Movimentos</h4>
+          <div class="header-num">
+            <span id="mov">00</span>/<span id="mov-total">20</span>
+          </div>
+        </div>
+      </div>
+      <div class="nivel">
+        <h4 class="header-titulo">Nivel</h4>
+        <div class="header-num"><span id="nivel">01</span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mesa -->
+
+  <main>
+    <div id="mesa" class="mesa"></div>
+    <div id="footer">
+      <button id="carta-dios">👳</button>
+      <p>Fernando Martinez Vallejo</p>
+    </div>
+
+    <!-- Modo -->
+
+    <div id="proximoNivel" class="proximo-nivel">
+      <div class="mood">
+        <h2>¡Perfecto!</h2>
+        <button id="proximoNivel-btn">Próximo nivel</button>
+      </div>
+    </div>
+
+    <div id="gameOver" class="game-over">
+      <div class="mood">
+        <h2>Game Over</h2>
+        <p>⚰️ No lograste entrar al Mictlán ⚰️</p>
+        <button class="reiniciar">Reiniciar</button>
+      </div>
+    </div>
+
+    <div id="endGame" class="end-game">
+      <div class="mood">
+        <h2>FELICIDADES</h2>
+        <p>¡Lograste llegar al Mictlán! 🏆</p>
+        <p>📿“Han terminado tus penas, vete, pues, a dormir tu sueño mortal”.🌹</p>
+        <button class="reiniciar">Reiniciar</button>
+      </div>
+    </div>
+  </main>
+
+
+
+  <audio src="audio/Acierto.wav" class="audio" id="audio-acierto" preload="auto"></audio>
+  <audio src="audio/Explosion.mp3" class="audio" id="audio-explosion" preload="auto"></audio>
+  <audio src="audio/Carta1.mp3" class="audio" id="audio-carta" preload="auto"></audio>
+  <audio src="audio/Catrina.wav" class="audio" id="audio-dios" preload="auto"></audio>
+  <audio src="audio/Ganar.wav" class="audio" id="audio-ganar" preload="auto"></audio>
+
+  <script src="js/variablesGlobales.js"></script>
+  <script src="js/carta.js"></script>
+  <script src="js/niveles.js"></script>
+  <script src="js/Confeti.js"></script>
+</body>
+
+</html>
